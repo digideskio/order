@@ -176,25 +176,6 @@ class PluginOrderLink extends CommonDBChild {
       Html::closeForm();
    }
    
-   public static function getCondition($itemtype) {
-      switch ($itemtype) {
-         case 'Computer' :
-            return "`is_visible_computer`";
-         case 'Monitor' :
-            return "`is_visible_monitor`";
-            case 'Printer' :
-            return "`is_visible_printer`";
-               case 'Phone' :
-            return "`is_visible_phone`";
-         case 'NetworkEquipment' :
-            return "`is_visible_networkequipment`";
-         case 'Peripheral' :
-            return "`is_visible_peripheral`";
-         case 'SoftwareLicense':
-            return "`is_visible_softwareversion`";
-      }
-   }
-
    public function showOrderLink($plugin_order_orders_id) {
       global $DB, $CFG_GLPI;
 
